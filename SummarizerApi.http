@@ -1,0 +1,33 @@
+@SummarizerApi_HostAddress = http://localhost:5232
+
+###
+
+POST {{SummarizerApi_HostAddress}}/summarizer/migrate
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGk6Ly9zdW1tYXJpemVyIiwiaXNzIjoiaHR0cHM6Ly9hcy5kZXYuZXhhbXBsZS5jb20iLCJleHAiOjE3NTY0NTc3OTYsIm5iZiI6MTc1NjQ1NDE5NiwiaWF0IjoxNzU2NDU0MTk2LCJzdWIiOiJyaWRpY3VsdXNAY29ycC52ZW5pdmlkaWluYy5jb20iLCJuYW1lIjoiUmlkaWN1bHVzIEF1cmVsaXVzIiwib3JnYW5pemF0aW9uIjoiQ29ycG9yYXRlIiwicm9sZXMiOlsiRXhlY3V0aXZlIl0sInNjb3BlIjoiRmlsZXMuUmVhZCIsImF6cCI6ImQ0MWVkMTBjLTVlYmQtNGVkYy05MDJlLWQ3YzM4MTA4MjA2YSIsImFwcF9uYW1lIjoiRXhlY3V0aXZlQnJpZWZpbmdzIn0.Va2PHs1ZK09WTBBENp-W_uGJ-SHQF7DuNZhHovCqi5w
+Content-Type: application/json
+
+###
+
+# {
+#   "aud": "api://summarizer",
+#   "iss": "https://as.dev.example.com",
+#   "exp": 1756457796,
+#   "nbf": 1756454196,
+#   "iat": 1756454196,
+#   "sub": "ridiculus@imp.venividiinc.com",
+#   "name": "Ridiculus Aurelius",
+#   "organization": "Imperium",
+#   "roles": [
+#     "Administrator"
+#   ],
+#   "scope": "Files.Read",
+#   "azp": "441103f3-d65d-4857-9b15-a32260d33e3a",
+#   "app_name": "ExecutiveBriefings"
+# }
+
+POST {{SummarizerApi_HostAddress}}/summarizer/query
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJhcGk6Ly9zdW1tYXJpemVyIiwiaXNzIjoiaHR0cHM6Ly9hcy5kZXYuZXhhbXBsZS5jb20iLCJleHAiOjE3NTY0NTc3OTYsIm5iZiI6MTc1NjQ1NDE5NiwiaWF0IjoxNzU2NDU0MTk2LCJzdWIiOiJyaWRpY3VsdXNAaW1wLnZlbml2aWRpaW5jLmNvbSIsIm5hbWUiOiJSaWRpY3VsdXMgQXVyZWxpdXMiLCJvcmdhbml6YXRpb24iOiJJbXBlcml1bSIsInJvbGVzIjpbIkFkbWluaXN0cmF0b3IiXSwic2NvcGUiOiJGaWxlcy5SZWFkIiwiYXpwIjoiNDQxMTAzZjMtZDY1ZC00ODU3LTliMTUtYTMyMjYwZDMzZTNhIiwiYXBwX25hbWUiOiJFeGVjdXRpdmVCcmllZmluZ3MifQ.zUWLs8orpYK18hzFUQ46_e3IA1Zy3Ic35uxten5J910
+Content-Type: application/json
+
+{ "query": "activity by category" }
+###
