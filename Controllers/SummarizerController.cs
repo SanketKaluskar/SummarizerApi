@@ -40,7 +40,7 @@ public class SummarizerController : ControllerBase
         try
         {
             // Find accessible chunks by applying AuthZ rules, (Subject, Scope, Resource) tuple.
-            // c.f. Google Zanzibar, Auth0 FGA
+            // cf. Google Zanzibar, Auth0 FGA
             
             // AuthZ occurs close to the resource (respository, in this case)
             // and uses biz rules like:

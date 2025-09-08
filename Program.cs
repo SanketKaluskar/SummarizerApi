@@ -50,7 +50,7 @@ if (authMode == AuthenticationMode.Development)
                 // multiple authN contexts, represented by multiple ClaimsIdentity.
                 // ClaimsPrincipal (1) --> ClaimsIdentity (0..n)
 
-                // Parse any "act" claim (c.f. actor delegation) and assign to 
+                // Parse any "act" claim (cf. actor delegation) and assign to 
                 // HttpContext.User.Identity.Actor
                 OnTokenValidated = context =>
                 {
