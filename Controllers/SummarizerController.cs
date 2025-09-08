@@ -87,7 +87,7 @@ public class SummarizerController : ControllerBase
             Stopwatch sw = Stopwatch.StartNew();
             string response = await _llmService.GetLLMResponseAsync(request.Query, context);
             sw.Stop();
-            _logger.LogInformation($"LLM responsed in {sw.ElapsedMilliseconds:N0} ms");
+            _logger.LogInformation($"LLM responded in {sw.ElapsedMilliseconds:N0} ms");
             _logger.LogInformation($"Response:\"{response}\"");
 
             return Ok(new { Response = response });
